@@ -1,5 +1,7 @@
 import json
 
+from flask import template_rendered
+
 
 def load_candidates_from_json(path: str):
     """
@@ -14,41 +16,30 @@ def load_candidates_from_json(path: str):
 def get_all():
     """
     The function does not accept any arguments and when called returns a list of all candidates
-    in the form of a string formatted in the specified form.
+    in the form of a list of dictionaries with personal data of all candidates.
     """
     data = load_candidates_from_json('candidates.json')
-    res = f'<h1>Все кандидаты</h1>'
-
-    for dict_ in data:
-        res += f"<p><a href='/candidate/{dict_['id']}'>{dict_['name']}</a></p>"
-
-    return res
-
+    return data
 
 
 def get_candidate(candidate_id: int):
     """
-    The function takes the candidate number as an argument and returns the candidate data in the specified
-    formatted form as a string. If a candidate with such a number is not in the database,
-    it returns the corresponding message.
+    The function takes the candidate's personal number as an argument and returns the candidate's data
+    in the form of a dictionary.
     """
     data = load_candidates_from_json('candidates.json')
 
     for dict_ in data:
         if dict_['id'] == candidate_id:
-            return f"<h1>{dict_['name']}</h1><p>{dict_['position']}</p><img src='{dict_['picture']}' width=200/>" \
-                   f"<p>{dict_['skills']}</p>"
-
-    return '<pre><h1 style="color:red">  В базе данных нет кандидата с таким номером</h1></pre>'
+            return dict_
 
 
 def get_candidates_by_name(candidate_name: str):
     """
-    The function takes as an argument a part of the candidate's name and when called returns a list
-    of all candidates whose name matches the desired value, in the form of a string formatted in the specified
-    form. If there are no such candidates, the function returns the corresponding message in the specified format.
+    The function takes part of the candidate's name as an argument and returns a list when called
+    of all the candidates whose names contain a given sequence of letters, the case of the characters does not matter.
     """
-    count_candidates, search = 0, ''
+    search = []
 
     candidate_name = candidate_name.lower()
 
@@ -57,25 +48,17 @@ def get_candidates_by_name(candidate_name: str):
     for dict_ in data:
         name = dict_['name'].lower()
         if candidate_name in name:
-            count_candidates += 1
-            search += f"<p><a href='/candidate/{dict_['id']}'>{dict_['name']}</a></p>"
+            search.append(dict_)
 
-    res = f'<h1>найдено кандидатов {count_candidates}</h2>'
-    res += search
-
-    if count_candidates:
-        return res
-
-    return '<pre><h1 style="color:red">  В базе данных нет кандидатов с таким именем</h1></pre>'
+    return search
 
 
 def get_candidates_by_skill(skill_name: str):
     """
-    The function takes as an argument the required skill of the candidate and, when called, returns a list
-    of all candidates with the required skill, in the form of a string formatted in the specified form.
-    If there are no such candidates, the function returns the corresponding message in the specified format.
+    The function takes as an argument the required skill of the candidate and returns a list when called
+    of all candidates with the required skills, in the form of a dictionary containing personal data.
     """
-    count_candidates, search = 0, ''
+    search = []
 
     candidate_skill = skill_name.lower()
 
@@ -85,16 +68,9 @@ def get_candidates_by_skill(skill_name: str):
         skills = dict_['skills'].lower()
         skills = skills.split(', ')
         if candidate_skill in skills:
-            count_candidates += 1
-            search += f"<p><a href='/candidate/{dict_['id']}'>{dict_['name']}</a></p>"
+            search.append(dict_)
 
-    res = f'<h1>Найдено с навыком {candidate_skill}: {count_candidates}</h2>'
-    res += search
-
-    if count_candidates:
-        return res
-
-    return '<pre><h1 style="color:red">  В базе данных нет кандидатов с такими навыками</h1></pre>'
+    return search
 
 
 #   Code for checking the functionality of the functions.
