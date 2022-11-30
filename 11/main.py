@@ -18,14 +18,14 @@ def page_candidate(x):
 #   Creating a view to display the list of candidates on a separate page with a search for a given part of the name.
 @app.route('/search/<candidate_name>')
 def page_candidates_by_name(candidate_name):
-    return render_template('search.html', candidates = get_candidates_by_name(candidate_name),
-                           count = len(get_candidates_by_name(candidate_name)))
+    candidates = get_candidates_by_name(candidate_name)
+    return render_template('search.html', candidates = candidates, count = len(candidates))
 
 #   Creating a view to display the data of candidates with a given skill on a separate page
 #   with a search for a given skill.
 @app.route('/skill/<skill_name>')
 def page_candidates_by_skill(skill_name):
-    return render_template('skill.html', candidates = get_candidates_by_skill(skill_name),
-                           count = len(get_candidates_by_skill(skill_name)), skill = skill_name)
+    candidates = get_candidates_by_skill(skill_name)
+    return render_template('skill.html', candidates = candidates, count = len(candidates), skill = skill_name)
 
 app.run()
