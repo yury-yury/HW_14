@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Поиск постов
+{% endblock %}
+
+{% block body %}
+<h1>Поиск постов</h1>
+<hr>
+    <form action="/search" method="get">
+        <p>По вхождению слова</p>
+        <input type="text" name="s" placeholder="Слово или часть слова">
+        <input class="bottom" type="submit" value="Найти" class="button">
+    </form>
+{% endblock %}

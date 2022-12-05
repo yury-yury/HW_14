@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Пост добавлен
+{% endblock %}
+
+{% block body %}
+<h1>Пост добавлен</h1>
+<hr>
+<div>
+    <img src="/{{dict_['pic']}}" width="500" alt="Картинка поста">
+
+    <p>
+        {{dict_['content']}}
+    </p>
+</div>
+<hr>
+{% endblock %}
+

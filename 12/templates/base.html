@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <div class="float_block">
+        <span>My cite</span>
+        </div>
+        <nav>
+            <a href="/"> Поиск постов </a>
+            <a href="/post">Добавить пост</a>
+        </nav>
+    </header>
+    <hr>
+    <main>
+    {% block body %}
+    {% endblock %}
+    </main>
+    <hr>
+    <footer>
+        <div>
+            <small> Student of the group "Python  development 18.0" Yury Yanovsky </small>
+            <br>
+            <small>Homework for lesson 12 "Mistakes and continued work with Flask"</small>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,33 @@
+body{
+margin:auto;
+font-family: Arial, sens-serif;
+}
+header{
+background-color: orange;
+}
+nav{
+text-align: right;
+padding: 15px;
+}
+nav a{
+margin: 0 10px 0 10px;
+}
+main{
+padding: 20px 15px 20px 15px;
+}
+textarea{
+width: 300px;
+width: 100%;
+}
+footer{
+text-align: right;
+background-color: grey;
+padding: 15px;
+}
+.float_block{
+float: left;
+margin: 15px;
+}
+.bottom{
+background-color: orange;
+}
