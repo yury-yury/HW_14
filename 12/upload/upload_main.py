@@ -1,5 +1,5 @@
 import logging
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, jsonify
 
 from upload.function import add_post
 
@@ -11,7 +11,6 @@ formatter_two = logging.Formatter("%(asctime)s : %(message)s")
 console_handler.setFormatter(formatter_two)
 logger_two.addHandler(console_handler)
 logger_two.warning("The logger 2 is working")
-
 
 upload_blueprint = Blueprint('upload_blueprint', __name__)
 
