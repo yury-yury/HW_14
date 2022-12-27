@@ -2,7 +2,6 @@ from flask import Flask, jsonify, request
 
 from functions import make_data_film, make_data_film_years, make_data_film_rating, make_data_film_by_genre
 
-
 app = Flask(__name__)
 
 app.config['JSON_AS_ASCII'] = False
@@ -36,6 +35,8 @@ def view_film_by_rating(rating):
     depending on the value of the variable part of the address, forms a request to an external function,
     receives data from it and returns it as JSON.
     """
+    res = None
+    
     if rating == 'children':
         res = make_data_film_rating('G')
     elif rating == 'family':
@@ -56,5 +57,4 @@ def view_film_by_genre(genre):
 
 
 if __name__ == '__main__':
-
     app.run(debug=True)

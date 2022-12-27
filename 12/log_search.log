@@ -1,0 +1,89 @@
+WARNING:one:The logger 1 is working
+WARNING:two:The logger 2 is working
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:one:The logger 1 is working
+WARNING:two:The logger 2 is working
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 128-009-601
+INFO:root:The post search page has been requested.
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:The search results page has been loaded
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:35] "GET /search?s=а HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:35] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:35] "[36mGET /static/images/IMG_20200617_191905.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:35] "[36mGET /static/images/IMG_20190817_192215.jpg HTTP/1.1[0m" 304 -
+INFO:root:The post search page has been requested.
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:44] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:44] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:The search results page has been loaded
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:51] "GET /search?s=альп HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:51] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:47:51] "[36mGET /static/images/IMG_20190817_192215.jpg HTTP/1.1[0m" 304 -
+WARNING:root:An empty list of posts was received
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:03] "GET /search?s=скалы HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:03] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:The post download page was requested.
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:09] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:10] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+WARNING:root:An invalid file format has been uploaded
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:20] "POST /post/upload HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:20] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:The post search page has been requested.
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:28] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:The search results page has been loaded
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:30] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:31] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:31] "[36mGET /static/images/IMG_20200617_191905.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [05/Dec/2022 23:48:31] "[36mGET /static/images/IMG_20190817_192215.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Desktop\\SkyPro\\Home_Work\\12\\upload\\upload_main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:one:The logger 1 is working
+WARNING:two:The logger 2 is working
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 128-009-601
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Desktop\\SkyPro\\Home_Work\\12\\upload\\upload_main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:one:The logger 1 is working
+WARNING:two:The logger 2 is working
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 128-009-601
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Desktop\\SkyPro\\Home_Work\\12\\search\\search_main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:one:The logger 1 is working
+WARNING:two:The logger 2 is working
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 128-009-601
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Desktop\\SkyPro\\Home_Work\\12\\upload\\upload_main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:one:The logger 1 is working
+WARNING:two:The logger 2 is working
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 128-009-601
+INFO:werkzeug: * Detected change in 'C:\\Users\\User\\Desktop\\SkyPro\\Home_Work\\12\\search\\search_main.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:one:The logger 1 is working
+WARNING:two:The logger 2 is working
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 128-009-601
+WARNING:one:The logger 1 is working
+WARNING:two:The logger 2 is working
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:root:The search results page has been loaded
+INFO:werkzeug:127.0.0.1 - - [06/Dec/2022 00:05:15] "GET /search?s= HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Dec/2022 00:05:16] "[36mGET /static/images/IMG_20200617_191905.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Dec/2022 00:05:16] "[36mGET /static/images/IMG_20190817_192215.jpg HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Dec/2022 00:05:16] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:The post search page has been requested.
+INFO:werkzeug:127.0.0.1 - - [06/Dec/2022 00:05:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Dec/2022 00:05:21] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:root:The search results page has been loaded
+INFO:werkzeug:127.0.0.1 - - [06/Dec/2022 00:05:27] "GET /search?s=д HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [06/Dec/2022 00:05:27] "[36mGET /static/css/main.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [06/Dec/2022 00:05:27] "[36mGET /static/images/IMG_20190817_192215.jpg HTTP/1.1[0m" 304 -

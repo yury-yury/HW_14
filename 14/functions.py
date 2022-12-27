@@ -2,6 +2,7 @@ import sqlite3
 
 import json
 
+
 def make_data_film(title: str):
     """
     The function takes as an argument, the name of the movie as a string, makes a query from the database
@@ -51,7 +52,6 @@ def make_data_film_years(from_year: int, to_year: int):
                     AND type = 'Movie'
                     ORDER BY release_year DESC
                     LIMIT 100"""
-
 
         cursor.execute(query)
         res = cursor.fetchall()
@@ -153,7 +153,7 @@ def find_partners(name_1: str, name_2: str):
     return res
 
 
-def search_for_movies_by_characteristics(type: str, release_year: int, genre: str):
+def search_for_movies_by_characteristics(type_film: str, release_year: int, genre: str):
     """
     The function receives a set of values as arguments: the type of painting (movie or TV series) as a string,
     the year of release as an integer and its genre as a string, makes a query from an external database
@@ -166,7 +166,7 @@ def search_for_movies_by_characteristics(type: str, release_year: int, genre: st
         query = f"""
                     SELECT title, description
                     FROM netflix
-                    WHERE type = '{type}'
+                    WHERE type = '{type_film}'
                     AND listed_in LIKE '%{genre}%'
                     AND release_year = '{release_year}'
                     """
@@ -176,7 +176,7 @@ def search_for_movies_by_characteristics(type: str, release_year: int, genre: st
 
     res_list = []
     for item in res:
-        dict_ = {}
+        dict_ = dict()
         dict_['title'] = item[0]
         dict_['description'] = item[1]
         res_list.append(dict_)
@@ -184,11 +184,10 @@ def search_for_movies_by_characteristics(type: str, release_year: int, genre: st
     return json.dumps(res_list)
 
 
-
 if __name__ == '__main__':
 
-    #   Code for checking and configuring the functionality of functions.
-    #print(make_data_film_years(2010, 2011))
-    #print(make_data_film_rating('G', 'PG', 'PG-13'))
-    #print(find_partners('Jack Black', 'Dustin Hoffman'))
+    # Code for checking and configuring the functionality of functions.
+    # print(make_data_film_years(2010, 2011))
+    # print(make_data_film_rating('G', 'PG', 'PG-13'))
+    # print(find_partners('Jack Black', 'Dustin Hoffman'))
     print(search_for_movies_by_characteristics('Movie', 2001, 'Dramas'))
