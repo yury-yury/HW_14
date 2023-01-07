@@ -1,7 +1,7 @@
 from flask import Blueprint, request
 import json
 
-from model import User, Customer, Executor, db
+from ..data.model import User, Customer, Executor, db
 
 
 users_blueprint = Blueprint('users_blueprint', __name__, url_prefix='/users')

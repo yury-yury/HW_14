@@ -1,7 +1,7 @@
 from flask import Blueprint, request
 import json
 
-from model import Offer, db
+from ..data.model import Offer, db
 
 offers_blueprint = Blueprint('offers_blueprint', __name__, url_prefix ='/offers')
 
